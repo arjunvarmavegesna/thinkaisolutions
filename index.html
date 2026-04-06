@@ -95,6 +95,21 @@ nav {
   margin-bottom: 24px;
   animation: fadeUp 0.7s 0.1s ease both;
 }
+.google-word {
+  font-family: 'Product Sans', 'Roboto', sans-serif;
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+.google-word span {
+  display: inline-block;
+  transition: transform 0.2s;
+}
+.google-word:hover span:nth-child(1) { transform: translateY(-4px); }
+.google-word:hover span:nth-child(2) { transform: translateY(-4px); transition-delay: 0.04s; }
+.google-word:hover span:nth-child(3) { transform: translateY(-4px); transition-delay: 0.08s; }
+.google-word:hover span:nth-child(4) { transform: translateY(-4px); transition-delay: 0.12s; }
+.google-word:hover span:nth-child(5) { transform: translateY(-4px); transition-delay: 0.16s; }
+.google-word:hover span:nth-child(6) { transform: translateY(-4px); transition-delay: 0.20s; }
 .hero h1 .gr {
   background: linear-gradient(90deg, var(--blue), var(--purple));
   -webkit-background-clip: text; -webkit-text-fill-color: transparent;
@@ -328,7 +343,7 @@ footer p { font-size: 12px; color: var(--muted); }
 <!-- HERO -->
 <section class="hero">
   <div class="hero-badge"><span class="dot"></span> Now live for Indian businesses</div>
-  <h1>Get more Google reviews<br>on <span class="gr">autopilot</span> via<br>WhatsApp</h1>
+  <h1>Get more <span class="google-word"><span style="color:#4285F4">G</span><span style="color:#EA4335">o</span><span style="color:#FBBC05">o</span><span style="color:#4285F4">g</span><span style="color:#34A853">l</span><span style="color:#EA4335">e</span></span> reviews<br>on <span class="gr">autopilot</span> via<br>WhatsApp</h1>
   <p>Think AI Solutions helps local businesses automatically collect 5-star reviews — and filters out negative feedback before it reaches Google.</p>
   <div class="hero-btns">
     <a class="btn-primary" href="#contact">Start Free Trial</a>
