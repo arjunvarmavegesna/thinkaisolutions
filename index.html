@@ -578,8 +578,27 @@ footer p { font-size: 12px; color: var(--muted); }
 <script>
 document.getElementById('contactForm').addEventListener('submit', function(e) {
   e.preventDefault();
-  this.style.display = 'none';
-  document.getElementById('formSuccess').style.display = 'block';
+  const fields = this.querySelectorAll('input, select, textarea');
+  const name        = fields[0].value.trim();
+  const phone       = fields[1].value.trim();
+  const business    = fields[2].value.trim();
+  const bizType     = fields[3].value.trim();
+  const plan        = fields[4].value.trim();
+  const message     = fields[5].value.trim();
+
+  const text =
+    `Hi Think AI Solutions! 👋\n\n` +
+    `I came from your website and I'm interested in your service.\n\n` +
+    `*Name:* ${name}\n` +
+    `*WhatsApp:* ${phone}\n` +
+    `*Business:* ${business}\n` +
+    `*Business Type:* ${bizType}\n` +
+    `*Plan Interested In:* ${plan || 'Not selected'}\n` +
+    `*Message:* ${message || 'No additional message'}\n\n` +
+    `Please get in touch with me. Thank you!`;
+
+  const encoded = encodeURIComponent(text);
+  window.open(`https://wa.me/919391714623?text=${encoded}`, '_blank');
 });
 
 // Scroll reveal
